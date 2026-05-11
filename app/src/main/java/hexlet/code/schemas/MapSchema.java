@@ -1,4 +1,4 @@
-package schemas;
+package hexlet.code.schemas;
 
 import java.util.Map;
 
@@ -13,11 +13,13 @@ public class MapSchema extends BaseSchema<Map> {
 
     @Override
     protected final boolean isValidValue(Map map) {
-        if (isRequired() && map != null && map.containsValue(null)) {
+        if (isRequired() && map.containsValue(null)) {
             return false;
         }
         if (size != null) {
-            return map != null && map.keySet().size() == size;
+            if (!(map.keySet().size() == size)) {
+                return false;
+            }
         }
         if (schemas != null) {
             for (Map.Entry<String, BaseSchema<String>> entry : schemas.entrySet()) {

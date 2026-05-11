@@ -6,3 +6,8 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=artem90s_java-project-78&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=artem90s_java-project-78)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=artem90s_java-project-78&metric=coverage)](https://sonarcloud.io/summary/new_code?id=artem90s_java-project-78)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=artem90s_java-project-78&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=artem90s_java-project-78)
+
+В данном репозитории находится исходный код сборника игр:
+* Валидатор данных
+
+Валидатор имеет три реализации: строковый, числовой, и объектов Map

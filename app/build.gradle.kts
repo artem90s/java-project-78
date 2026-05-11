@@ -5,6 +5,10 @@ plugins {
     checkstyle
 }
 
+checkstyle {
+    configFile = file("config/checkstyle/checkstyle.xml")
+}
+
 sonar {
     properties {
         property("sonar.projectKey", "artem90s_java-project-78")

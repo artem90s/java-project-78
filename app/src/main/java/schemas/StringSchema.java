@@ -1,12 +1,12 @@
 package schemas;
 
-public class StringSchema {
-    private boolean required;
+public class StringSchema extends BaseSchema<String> {
     private int minLength;
     private String containString;
 
-    public final void required() {
-        required = true;
+    public final StringSchema required() {
+        setRequired(true);
+        return this;
     }
 
     public final StringSchema minLength(int i) {
@@ -19,8 +19,9 @@ public class StringSchema {
         return this;
     }
 
-    public final boolean isValid(String string) {
-        if (required && (string == null || string.isEmpty())) {
+    @Override
+    protected final boolean isValidValue(String string) {
+        if (isRequired() && string.isEmpty()) {
             return false;
         }
         if (minLength > 0 && string.length() < minLength) {

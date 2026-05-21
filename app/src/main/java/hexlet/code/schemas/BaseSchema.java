@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.function.Predicate;
 
 public abstract class BaseSchema<T> {
-
     protected Map<String, Predicate<T>> checks = new HashMap<>();
     protected boolean required = false;
 
